@@ -1,0 +1,150 @@
+/* ============================= Common ============================= */
+
+/* Wrapper Width */
+.swagger-ui .wrapper {
+  max-width: 750px;
+  font-family: Lato, sans-serif;
+  color: var(--indigo);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
+/* Code blocks */
+.swagger-ui .markdown code,
+.swagger-ui .renderedMarkdown code {
+  font-size: 13px;
+  font-weight: 500;
+  color: #414141;
+}
+
+/* ============================= Topbar ============================= */
+
+.topbar {
+  display: none;
+}
+
+/* ============================= Auth ============================= */
+.swagger-ui .auth-container input[type="password"],
+.swagger-ui .auth-container input[type="text"] {
+  width: 100%;
+}
+/* ============================= Info ============================= */
+
+/* Doc Title */
+.swagger-ui .info hgroup.main {
+  margin: 0 0 30px;
+}
+.swagger-ui .info .title {
+  margin-bottom: 10px;
+}
+/* Hide Base URL Links */
+.swagger-ui .info .base-url {
+  display: none;
+}
+.swagger-ui .info .main .link {
+  font-size: 14px;
+}
+/* Info Description */
+.swagger-ui .info p {
+  margin-bottom: 30px;
+}
+/* Info Content Styling */
+.swagger-ui .info li,
+.swagger-ui .info p,
+.swagger-ui .info table {
+  font-size: 16px;
+  font-family: Lato, sans-serif;
+  color: var(--indigo);
+}
+
+/* ============================= Scheme ============================= */
+
+.swagger-ui .scheme-container {
+  max-width: 710px;
+  padding: 0px 0px 10px 0px;
+  margin: 0 auto;
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+.swagger-ui .scheme-container .schemes {
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ============================= APIs ============================= */
+
+/* Section bottom border */
+.swagger-ui .opblock-tag {
+  border-bottom: 0px;
+  padding-right: 10px;
+}
+
+/* Disable API + Schema Title Outlines */
+.swagger-ui .model-box-control:focus,
+.swagger-ui .models-control:focus,
+.swagger-ui .opblock-summary-control:focus {
+  outline: none;
+}
+/* Hide Down Arrow */
+.swagger-ui .opblock-summary-control .arrow {
+  display: none;
+}
+/* Hide URI Clipboard */
+.swagger-ui .opblock .copy-to-clipboard {
+  display: none;
+}
+/* API Description */
+.swagger-ui .opblock .opblock-summary-description {
+  text-align: right;
+  margin-right: 10px;
+}
+
+.swagger-ui .opblock .opblock-body .execute-wrapper,
+.swagger-ui .opblock .opblock-body .btn-group {
+  padding-top: 0px;
+}
+/* Actual Query Result */
+.responses-inner > div > div {
+  background: #fffbd6;
+  border: solid 1px #eadd71;
+  padding: 5px 20px 20px 20px;
+  border-radius: 7px;
+  margin-bottom: 20px;
+}
+.responses-inner > div > h4 {
+  display: none;
+}
+/* Hide default value of query parameters */
+.swagger-ui .parameters-container .parameters-col_description .parameter__default {
+  display: none;
+}
+/* Request Parameters */
+.swagger-ui .parameters-container .parameters-col_name .parameter__name {
+  color: #3a56a3;
+  font-weight: 600;
+}
+.swagger-ui .parameters-container .parameters-col_name .parameter__type {
+  color: #808080;
+  font-weight: 600;
+}
+.swagger-ui .parameters-container .parameters-col_name .parameter__in {
+  color: #808080;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Response Table Titles */
+.swagger-ui .responses-inner .response-col_status,
+.swagger-ui .responses-inner .response-col_description {
+  color: #3b4151;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+/* ============================= Models / Schema ============================= */
+
+/* Disable Schema Title Background */
+.swagger-ui .models .models-control {
+  background: none !important;
+}

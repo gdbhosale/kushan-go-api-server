@@ -1,0 +1,9 @@
+{
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=827846
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "golang.go",
+    "oderwat.indent-rainbow",
+    "streetsidesoftware.code-spell-checker"
+  ]
+}
