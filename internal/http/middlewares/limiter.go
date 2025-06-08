@@ -1,7 +1,7 @@
 package middlewares
 
 import (
-	"goat/internal"
+	"go-api/internal"
 
 	"net"
 	"net/http"

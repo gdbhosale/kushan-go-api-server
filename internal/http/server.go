@@ -1,9 +1,9 @@
 package http
 
 import (
-	"goat/internal"
+	"go-api/internal"
 
-	_ "goat/docs"
+	_ "go-api/docs"
 
 	"context"
 	"net/http"
@@ -71,6 +71,6 @@ func (s *Server) Close() error {
 // ListenAndServeTLSRedirect runs an HTTP server on port 80 to redirect users
 // to the TLS-enabled port 443 server.
 func (s *Server) ListenAndServe() error {
-	internal.Debug("Server::ListenAndServe", "Listening on port "+strconv.Itoa(s.Port))
+	internal.Debug("Server::ListenAndServe", "APIs: http://localhost:"+strconv.Itoa(s.Port))
 	return s.server.ListenAndServe()
 }

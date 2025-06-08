@@ -11,10 +11,10 @@
 /bin/*
 .env
 
-# Node
-/node_modules
-npm-debug.log
-yarn-error.log
+# Ignore Swagger Docs
+/docs/docs.go
+/docs/swagger.json
+/docs/swagger.yaml
 
 # IDEs and editors
 .idea/

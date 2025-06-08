@@ -1,8 +1,8 @@
 package http
 
 import (
-	"goat/internal"
-	"goat/internal/http/middlewares"
+	"go-api/internal"
+	"go-api/internal/http/middlewares"
 
 	"encoding/json"
 	"net/http"

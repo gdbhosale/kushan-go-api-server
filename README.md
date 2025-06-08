@@ -71,11 +71,16 @@ You can run project by following options:
     make run
     ```
 
-4. Update Swagger Doc:
+## Utilities
+
+Update Swagger Doc:
 
     ```
     make swagger
     ```
+
+
+
 
 ## References:
 - https://github.com/swaggo/swag

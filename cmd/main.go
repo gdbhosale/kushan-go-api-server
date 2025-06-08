@@ -1,9 +1,9 @@
 package main
 
 import (
-	"goat/internal"
-	"goat/internal/http"
-	"goat/internal/pgx"
+	"go-api/internal"
+	"go-api/internal/http"
+	"go-api/internal/pgx"
 	"strconv"
 
 	"context"
@@ -28,19 +28,19 @@ func init() {
 	}
 }
 
-// @title			GOAT Admin
+// @title			Kushan GO API Server
 // @version		1.0.0
-// @description	This is a API Documentation for GOAT Admin which defines all its API's for Angular Frontend.
+// @description	This is a API Documentation for Kushan GO API Server which defines all its API's for Frontend.
 // @description
-// @description This API provides endpoints to manage users, RBAC, customers and many other standard Modules of CRM (Customer Relationship Management) system. It allows users to create, retrieve, update, and delete various records associated with customers.
+// @description	This API provides endpoints to manage users, RBAC, customers and many other standard Modules of CRM (Customer Relationship Management) system. It allows users to create, retrieve, update, and delete various records associated with customers.
 // @description
-// @description It needs JWT Token based authentication for user access, Modular RBAC, validation of input data, and error handling to ensure data integrity and security.
+// @description	It needs JWT Token based authentication for user access, Modular RBAC, validation of input data, and error handling to ensure data integrity and security.
 // @description
-// @description The API is designed to be RESTful, using standard HTTP methods (GET, POST, PUT, DELETE) for CRUD operations on resources. Responses are formatted as JSON.
+// @description	The API is designed to be RESTful, using standard HTTP methods (GET, POST, PUT, DELETE) for CRUD operations on resources. Responses are formatted as JSON.
 // @termsOfService
-// @contact.name				GOAT Support
-// @contact.url				https://goatadmin/support
-// @contact.email				support@goatadmin.com
+// @contact.name				Support
+// @contact.url				https://dwij.in
+// @contact.email				support@dwij.in
 // @license.name				MIT
 // @license.url				https://opensource.org/license/mit
 // @host						localhost:8083

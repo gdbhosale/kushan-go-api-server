@@ -1,8 +1,8 @@
 package http
 
 import (
-	"goat/internal"
-	"goat/internal/http/middlewares"
+	"go-api/internal"
+	"go-api/internal/http/middlewares"
 
 	"encoding/json"
 	"fmt"
@@ -11,6 +11,7 @@ import (
 	"time"
 
 	"github.com/golang-jwt/jwt"
+	"golang.org/x/crypto/bcrypt"
 )
 
 // Helper function for registering all auth routes.
@@ -32,15 +33,15 @@ func (s *Server) registerAuthRoutes(r *http.ServeMux) {
 
 // Represents User Sign In Request who can login to system
 type SigninRequest struct {
-	Email    string `json:"email" example:"gdb.sci123@gmail.com"` // Signin Email Address
-	Password string `json:"password" example:"12345678"`          // Signin Password
+	Email    string `json:"email" example:"ganesh@dwij.in"` // Signin Email Address
+	Password string `json:"password" example:"12345678"`    // Signin Password
 }
 
 // Represents User Sign In Response with Access Token & User Info
 type SigninResponse struct {
 	ID        uint     `json:"id" example:"1"`                                                                                                                      // User's ID
 	Name      string   `json:"name" example:"John Doe"`                                                                                                             // User's Name
-	Email     string   `json:"email" example:"gdb.sci123@gmail.com"`                                                                                                // User's Email
+	Email     string   `json:"email" example:"ganesh@dwij.in"`                                                                                                      // User's Email
 	Token     string   `json:"token" example:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTQ3NTA0NjYsImlkIjoxfQ.sX29VB_6SQH3Kjpggo89M2QqT5A6PAfMz-r1sR7v99M"` // JWT Auth Token
 	ExpiresAt string   `json:"expiresAt" example:"2024-05-03T15:34:26.460Z"`                                                                                        // JWT Token Expiry Time
 	Roles     []string `json:"roles" example:"['superadmin']"`                                                                                                      // User Roles
@@ -49,7 +50,7 @@ type SigninResponse struct {
 // Signin godoc
 //
 //	@Summary		Sign In API
-//	@Description	Sign In API for GOATAdmin
+//	@Description	Sign In API
 //	@Tags			auth
 //	@Accept			json
 //	@Param			input	body	SigninRequest	true	"Signin Credentials"
@@ -71,15 +72,15 @@ func (s *Server) Signin(w http.ResponseWriter, r *http.Request) {
 	// Fetch users from database.
 	user, err := s.UserService.FindUserByEmail(signinRequest.Email)
 	if err != nil {
-		internal.APIError(w, "Http::Signin", "User not found", http.StatusNotFound, err)
+		internal.APIError(w, "Http::Signin", "Invalid Credentials", http.StatusNotFound, err)
 		return
 	}
 
 	// Check the password
-	// if err := bcrypt.CompareHashAndPassword([]byte(user.Password), []byte(signinRequest.Password)); err != nil {
-	// 	internal.APIError(w, "Http::Signin", "Invalid Credentials", http.StatusUnauthorized, err)
-	// 	return
-	// }
+	if err := bcrypt.CompareHashAndPassword([]byte(user.Password), []byte(signinRequest.Password)); err != nil {
+		internal.APIError(w, "Http::Signin", "Invalid Credentials", http.StatusUnauthorized, err)
+		return
+	}
 
 	expiresAtTime := time.Now().Add(time.Hour * 24)
 	accessToken, err := generateAccessToken(user.ID, expiresAtTime)
@@ -113,7 +114,7 @@ type SignoutResponse struct {
 // Signout godoc
 //
 //	@Summary		Signout API
-//	@Description	Signout API for GOATAdmin
+//	@Description	Signout API
 //	@Tags			auth
 //	@Accept			json
 //	@Produce		json

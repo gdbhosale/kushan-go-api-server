@@ -1,7 +1,7 @@
 package pgx
 
 import (
-	"goat/internal"
+	"go-api/internal"
 
 	"strconv"
 	"strings"

@@ -1,7 +1,7 @@
 package http
 
 import (
-	"goat/internal"
+	"go-api/internal"
 
 	"fmt"
 	"net/http"
@@ -119,5 +119,5 @@ func (s *Server) loadSwagger() {
 	s.Router.Handle("/swagger-ui/", http.StripPrefix("/swagger-ui/", http.FileServer(http.Dir("./swagger-ui"))))
 	s.Router.Handle("/swagger/*", sm)
 
-	internal.Debug("Http::Swagger", "http://localhost:"+strconv.Itoa(s.Port)+"/swagger")
+	internal.Debug("Http::Swagger", "         Docs: http://localhost:"+strconv.Itoa(s.Port)+"/swagger")
 }

@@ -1,5 +1,5 @@
 INSERT INTO users (id, name, email, password, created_at, updated_at, deleted_at) VALUES
-(1, 'Alex Thompson', 'alex.thompson@example.com', '$2y$10$iyoFZrhv9u1fX4ywnis4Aeddfu3fbGkEgTFso0Z5POPPnUdffIwc.', '2015-03-12 08:41:54', '2024-03-13 16:28:25', NULL),
+(1, 'Ganesh Bhosale', 'ganesh@dwij.in', '$2a$10$vZj7NYj6.puZTFvwx/JHQeppmWgTChsZ3ya63V6vnxQS1XOKn8Vke', '2015-03-12 08:41:54', '2024-03-13 16:28:25', NULL),
 (2, 'Sarah Martinez', 'smartinez@example.net', '$2y$10$AeZor3HNsmA.pZ9ufBOwdOZTQv1HDak6dpE0o8knWOG9b4qopKMj6', '2015-03-17 16:42:10', '2015-03-17 22:12:10', NULL),
 (3, 'Michael Chen', 'mchen.work@example.com', '$2y$10$4KwqV1mKhzmRdDou2Q/T0uGKJIQ4fxnOaf72Y/YUOKGNEsj79tUfS', '2015-04-06 13:40:03', '2016-02-09 08:09:21', NULL),
 (4, 'Emily Rodriguez', 'emily.r2024@example.org', '$2y$10$cJTUlXhMeulmj4K5apf9n.RYs8JkwmMWqAIIx6jrFgBmz/HqMfTrK', '2015-06-18 19:02:03', '2015-06-19 00:32:03', NULL),

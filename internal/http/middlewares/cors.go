@@ -7,7 +7,7 @@ func AllowCors(next http.Handler) http.Handler {
 
 		// Allow all origins (you may want to restrict this to specific origins)
 		switch origin := r.Header.Get("Origin"); origin {
-		case "http://localhost:8083", "http://localhost:8084", "https://app.goatadmin.com", "https://staging.goatadmin.com":
+		case "http://localhost:8083", "http://localhost:8084", "https://kushant-go.dwij.in":
 			w.Header().Set("Access-Control-Allow-Origin", origin)
 		}
 
